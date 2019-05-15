@@ -1,0 +1,87 @@
+<!--
+/**********************************************************************************************************************
+***         ITC363 assignment 2 HTML document
+***
+***         Author:             Ian Blott : 11606379 - charles_sturt@blott.com.au
+***         Project:            ITC363 Assignemnt 2
+***         Dev Date:           5/4/2019
+***         Completion Date:    19/4/2019
+***
+**********************************************************************************************************************/
+//-->
+<html>
+    <head>
+        <title>Ian Blott - IT363 Assessment #2 - 2D Graphics Program</title>
+
+        <!-- Include the provided JavaScript files //-->
+        <script type="text/javascript" src="Common/webgl-utils.js"></script>
+        <script type="text/javascript" src="Common/initShaders.js"></script>
+        <script type="text/javascript" src="Common/MV.js"></script>
+        
+        <!-- Include the custom JavaScript files //-->
+        <script type="application/javascript" src="UserInput.js"></script>
+        <script type="application/javascript" src="RegularPolygon.js"></script>
+        <script type="application/javascript" src="Controller.js"></script>
+        <script type="application/javascript" src="GUI.js"></script>
+        
+        <!-- Include the CSS files //-->
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    
+    </head>
+    <body>
+        <!-- page 'title' // -->
+        <header>
+            <h1>Ian Blott - Student ID: 11606379</h1>
+        </header>
+        
+        <!-- user controls // -->
+        <nav>
+            <ul>
+                <!-- polygon type switcher // -->
+                <li class="typeSelector">
+                    <label for="polygonType">Polygon Type</label>
+                    <select onchange="javascript:changePolygonTypeSelector();" name="polygonType" id="polygonType">
+                        <option selected="selected" value="regular">Regular Polygon</option>
+                        <option value="user">User input</option>
+                    </select>
+                </li>
+
+                <!-- side count switchers used for regular polgyon mode// -->
+                <li id="polygonSideCount">
+                    Polygon Side Count:
+                    <div onclick="javascript:changeVertexCount('3');" id="sideSelect3">3</div>
+                    <div onclick="javascript:changeVertexCount('4');" id="sideSelect4">4</div>
+                    <div onclick="javascript:changeVertexCount('5');" id="sideSelect5">5</div>
+                    <div onclick="javascript:changeVertexCount('6');" id="sideSelect6">6</div>
+                    <div onclick="javascript:changeVertexCount('7');" id="sideSelect7">7</div>
+                    <div onclick="javascript:changeVertexCount('8');" id="sideSelect8">8</div>
+                    <div onclick="javascript:changeVertexCount('9');" id="sideSelect9">9</div>
+                </li>
+
+                <!-- clear button for user input mode // -->
+                <li id="vertexClearLink" >
+                    <button onclick="javascript:clearVertexList();">Clear Vertex List</button>
+                </li>
+
+                <!-- colour switcher // -->
+                <li id="colourPicker">
+                    <label for="polygonColour">Select Colour</label>
+                    <select  onchange="javascript:changeColourSelector();" name="polygonColour" id="polygonColour">
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+        
+        
+        <!-- canvas element // -->
+        <section>
+            <canvas id="mainCanvas" width="800" height="800">
+                Oh noes! it looks like your browser does not support HTML5 canvas
+            </canvas>
+        </section>
+        
+    </body>
+</html>

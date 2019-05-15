@@ -1,0 +1,152 @@
+/**********************************************************************************************************************
+***
+***         ITC363 assignment 2 CSS document
+***
+***         Author:             Ian Blott : 11606379 - charles_sturt@blott.com.au
+***         Project:            ITC363 Assignemnt 2
+***         Dev Date:           5/4/2019
+***         Completion Date:    19/4/2019
+***
+**********************************************************************************************************************/
+
+
+html,
+body{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background-color: #eee;
+    font: bold 12px/25px Arial, sans-serif;
+}
+
+header{ 
+    text-align:center;
+    width:100%;
+    padding:10px 0;
+    background-color:#222;
+    color:#AAA;
+}
+
+header h1{
+    margin:0px;
+    padding:0px;
+}
+
+nav{
+    background-color:#292f38;
+    padding:5px 0;
+    border-bottom:1px solid #333;
+    text-align:center;
+    color:#fff;
+}
+
+section{
+    margin:20px auto 0;
+    width:800px;
+}     
+
+canvas{
+    border:1px solid #333;
+}
+
+#PolygonSideCount div,
+nav ul li{
+    display:inline-block;
+}
+
+#vertexClearLink{
+    cursor:pointer;
+    margin:0 20px;
+    color:blue;
+    text-decoration:underline;
+}
+
+#PolygonSideCount .active{
+    color: #3e5706;
+}
+
+#vertexClearLink button{
+    border:0px;
+    padding:5px;
+}
+
+#polygonType,
+#polygonColour{
+    border:1px solid #333;
+    background-color:#eee;
+    padding:5px;    
+    color: #000;
+}
+
+#PolygonSideCount div{
+    display: inline-block;
+    position: relative;
+    margin: 3px;
+    padding: 0 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #515151;
+}
+
+
+#vertexClearLink button,
+#PolygonSideCount div,
+#polygonType,
+#polygonColour{
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+
+
+
+
+
+/**********************************************************************************************************************
+***
+  * beelow CSS is used for the user control buttons. they are are a modified version of example code found at 
+  * https://designmodo.com/create-css3-buttons/ 
+  *
+**********************************************************************************************************************/
+
+#vertexClearLink button,
+#polygonColour,
+#polygonType,
+#PolygonSideCount div{
+    text-shadow: 1px 1px 1px rgba(255,255,255, .22);
+    background: #d3d3d3; /* Old browsers */
+    background: -moz-linear-gradient(top,  #d3d3d3 0%, #8a8a8a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3d3d3), color-stop(100%,#8a8a8a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #d3d3d3 0%,#8a8a8a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #d3d3d3 0%,#8a8a8a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #d3d3d3 0%,#8a8a8a 100%); /* IE10+ */
+    background: linear-gradient(top,  #d3d3d3 0%,#8a8a8a 100%); /* W3C */
+
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    -o-transition: all 0.15s ease;
+    -ms-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+    cursor:pointer;
+}
+
+#PolygonSideCount .active{
+    background: -moz-linear-gradient(top,  #a5cd4e 0%, #6b8f1a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a5cd4e), color-stop(100%,#6b8f1a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%); /* IE10+ */
+    background: linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%); /* W3C */
+}
+
+#PolygonSideCount div:hover {
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
+    box-shadow: 1px 1px 1px rgba(0,0,0,.29), inset 0px 0px 2px rgba(0,0,0, .5);
+}
+/*********************************************************************************************************************/
